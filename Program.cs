@@ -25,10 +25,10 @@ namespace OOP12
                 switch(input)
                 {
                     case ShowAllCommand:
-                        zoopark.ShowAllAviary(zoopark.aviaryList);
+                        zoopark.ShowAllAviary();
                         break; 
                     case ApproachTheEnclosureCommand:
-                        zoopark.ApproachTheEnclosure(zoopark.aviaryList);
+                        zoopark.ApproachTheEnclosure();
                         break;
                     case Exit:
                         Console.WriteLine("Программа завершена");
