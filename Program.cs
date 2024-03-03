@@ -51,28 +51,28 @@ namespace OOP12
 
     class Zoopark
     {
-        public List<Aviary> aviaryList = new List<Aviary>() {new Aviary("Лев", "Мужской", 2, "Рычание"), new Aviary("Зебра", "Женский", 4, "Ква-ха"), new Aviary("Жираф", "Мужской", 3, "Фыркает"), new Aviary("Капибара", "Мужской/Женский", 12, "Свист"), new Aviary("Пингвин", "Мужской/Женский", 22, "Писк") };
+        private List<Aviary> _aviaryList = new List<Aviary>() {new Aviary("Лев", "Мужской", 2, "Рычание"), new Aviary("Зебра", "Женский", 4, "Ква-ха"), new Aviary("Жираф", "Мужской", 3, "Фыркает"), new Aviary("Капибара", "Мужской/Женский", 12, "Свист"), new Aviary("Пингвин", "Мужской/Женский", 22, "Писк") };
 
-        public void ShowAllAviary(List<Aviary> aviaryList)
+        public void ShowAllAviary()
         {
             int index = 0;
 
-            foreach(Aviary aviary in aviaryList)
+            foreach(Aviary aviary in _aviaryList)
             {
                 index++;
                 Console.WriteLine($"{index}. {aviary.TypeAnimal} - {aviary.Gender} - {aviary.CountAnimal} особей - {aviary.Sound}");
             }    
         }
 
-        public void ApproachTheEnclosure(List<Aviary> aviaryList)
+        public void ApproachTheEnclosure()
         {
-            ShowAllAviary(aviaryList);
+            ShowAllAviary();
 
             Console.WriteLine("Выберите индекс вольера");
             int index = Convert.ToInt32(Console.ReadLine()) - 1;
 
-            Console.WriteLine("Вы подошди к вальеру с " + aviaryList[index].TypeAnimal);
-            Console.WriteLine($"Информация: {aviaryList[index].TypeAnimal} - {aviaryList[index].Gender} - {aviaryList[index].CountAnimal} особей - {aviaryList[index].Sound}");
+            Console.WriteLine("Вы подошди к вальеру с " + _aviaryList[index].TypeAnimal);
+            Console.WriteLine($"Информация: {_aviaryList[index].TypeAnimal} - {_aviaryList[index].Gender} - {_aviaryList[index].CountAnimal} особей - {_aviaryList[index].Sound}");
         }
     }
 
